@@ -34,7 +34,7 @@ s.rstrip() #removes trailing whitespace
 s.replace("old", "new") #replaces all instances of 'old' with 'new'
 s.split(",") #splits at commas
 words = ["Hello","World"]
-",".join(words) #combines iterable words into one string, separated by string ","
+",".join(string_iterable) #combines all itemsin iterable (must be strings) into one string, separated by ","
 s.find('el') #returns lowest index of 'el' in s. Returns -1 if not found.
 s.count('ll') #reurns # of non-overlapping occurences of 'll' in s
 s.startswith("hel") #returns true if s starts with 'hel'
@@ -67,7 +67,14 @@ f,*r,l = "unpack a string" # f='u', r=['n',p','a',...,'n'], l='g'
 enumerate(iterable) #returns iterable of tuples (index, val)
 enumerate(['a','b','c']) #returns iterable containing (0,'a'), (1,'b'), (2,'c')
 #tuples
-
+tuple(iterable) #returns tuple with items of iterable
+tuple(1,2) #raises Error
+x = (1) #x is an int
+x = (1,) #x is a tuple
+x[0] = 2 #not allowed
+#lambdas
+bar = lambda baz,qux,quux=0: baz + qux + quux #quux has default value 0
+#start from week 4
 
 
 
