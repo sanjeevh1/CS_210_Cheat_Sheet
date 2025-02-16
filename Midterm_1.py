@@ -49,7 +49,7 @@ s[3::-1] #goes backwards from 3 to beginning
 s[-3:] #last three characters
 #lists
 l=[1,2,3,4,5]
-list(s) #returns ['h','e','l','l',...]
+list(iterable) #returns elements of iterable in list
 l.extend(iterable) #appends items from iterable
 l.insert(i, x) #inserts x at index i
 l.remove(x) #removes first instance of x
@@ -72,9 +72,26 @@ tuple(1,2) #raises Error
 x = (1) #x is an int
 x = (1,) #x is a tuple
 x[0] = 2 #not allowed
-#lambdas
+
 bar = lambda baz,qux,quux=0: baz + qux + quux #quux has default value 0
-#start from week 4
+filter(func, iterable) #returns 'filter object' iteratable containing the items x of iterable satisfying func(x)
+#reduce
+reduce(func, iterable, initializer) #applies func repeatedly to elements of iterable, starting w. initializer
+reduce(func, iterable) #applies func repeatedly to elements of iterable, starting with first element
+reduce(lambda x, y: x + y, [1,2,3,4,5], 7) #returns 7 + 1 + 2 + 3 + 4 + 5
+reduce(lambda x, y: x + y, [1,2,3,4,5]) #returns 1 + 2 + 3 + 4 + 5
+#list comprehension
+[i for i in iterable]
+[i for i in iterable if condition(i)] #list of elements of i satisfying condition(i)
+[(x,y) for x in iterable_1 for y in iterable_2 if condition(x,y)]
+
+
+
+
+
+
+
+
 
 
 
