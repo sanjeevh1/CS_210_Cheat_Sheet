@@ -84,6 +84,13 @@ reduce(lambda x, y: x + y, [1,2,3,4,5]) #returns 1 + 2 + 3 + 4 + 5
 [i for i in iterable]
 [i for i in iterable if condition(i)] #list of elements of i satisfying condition(i)
 [(x,y) for x in iterable_1 for y in iterable_2 if condition(x,y)]
+#generator
+g = (item for item in iterable) #g is a generator object
+next(generator, default) #returns next item in generator, or default if no more items
+#file IO
+with open("foo.txt", 'w') as file:
+    file.write("Hello\n") #newline character needed; otherwise, next write will start on same line
+    file.write("Goodbye\n")
 
 
 
